@@ -1,5 +1,5 @@
 // camel-k: language=java property=file:application.properties
-// camel-k: dependency=github:openshift-integration:camel-k-example-event-streaming:1.10.x-SNAPSHOT
+// camel-k: dependency=github:openshift-integration:camel-k-example-event-streaming:opendata-SNAPSHOT
 // camel-k: dependency=camel:http
 
 import static java.util.stream.Collectors.toList;
@@ -41,7 +41,7 @@ public class OpenAQConsumer extends RouteBuilder {
                 .setHeader(Exchange.HTTP_METHOD).constant("GET")
                 .to("{{consumers.fetch.url}}?limit={{consumers.fetch.limit}}")
                 .unmarshal().json(JsonLibrary.Jackson, OpenAQData.class)
-
+                .log("${body}")
                 /*
                 In this example we are only interested on the measurement data ... and we want to sent each
                 measurement separately. To do, we use a splitter to split the results array and send to Kafka

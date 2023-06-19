@@ -41,6 +41,8 @@ public class PollutionData {
         }
     }
 
+
+    private String locationId;
     private String location;
     private String parameter;
     private DateInfo date;
@@ -49,6 +51,16 @@ public class PollutionData {
     private Coordinates coordinates;
     private String country;
     private String city;
+    private boolean isMobile;
+    private boolean isAnalysis;
+    private String entity;
+    private String sensorType;
+    public String getLocationId() {
+        return locationId;
+    }
+    public void setLocationId(String locationId) {
+        this.locationId = locationId;
+    }
 
     public String getLocation() {
         return location;
@@ -112,5 +124,37 @@ public class PollutionData {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public boolean getIsMobile() {
+        return isMobile;
+    }
+
+    public void setIsMobile(boolean isMobile) {
+        this.isMobile = isMobile;
+    }
+
+    public boolean getIsAnalysis() {
+        return isAnalysis;
+    }
+
+    public void setIsAnalysis(boolean isAnalysis) {
+        this.isAnalysis = isAnalysis;
+    }
+
+    public String getEntity() {
+        return entity;
+    }
+
+    public void setEntity(String entity) {
+        this.entity = entity;
+    }
+
+    public String getSensorType() {
+        return sensorType;
+    }
+
+    public void setSensorType(String sensorType) {
+        this.sensorType = sensorType;
     }
 }

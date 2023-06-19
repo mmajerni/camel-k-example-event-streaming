@@ -3,7 +3,7 @@ package com.redhat.integration.pollution;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;zz
 
 public class OpenAQData {
     @JsonIgnore
